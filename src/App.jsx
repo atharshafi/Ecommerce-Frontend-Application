@@ -1,6 +1,9 @@
 // src/App.jsx
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import AdminLogin from './pages/AdminLogin';
+import ManageProducts from "./pages/ManageProducts";
+import AdminDashboard from "./pages/AdminDashboard";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Products from "./pages/Products";
@@ -19,6 +22,9 @@ function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/orders" element={<Orders />} />
+        <Route path="/admin/dashboard" element={<AdminDashboard />} />
+        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/admin/products" element={<ManageProducts />} />
       </Routes>
     </BrowserRouter>
   );

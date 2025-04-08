@@ -1,6 +1,6 @@
 export default function ProductCard({ product, onAdd }) {
   return (
-    <div className="bg-green-200 shadow-lg rounded-lg overflow-hidden border hover:shadow-xl transition-shadow duration-300 ease-in-out transform hover:scale-105">
+    <div className="bg-yellow-100 shadow-lg rounded-lg overflow-hidden border hover:shadow-xl transition-shadow duration-300 ease-in-out transform hover:scale-105">
       <img
         src={product.imageUrl}
         alt={product.name}

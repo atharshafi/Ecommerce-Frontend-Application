@@ -1,16 +1,17 @@
 import { useState } from "react";
 import { register } from "../api/api"; // Ensure this is the correct API call for registering a user
 
-export default function Register({ onRegisterSuccess }) {
+export default function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [fullName, setFullName] = useState(""); // Full name state
+  const [fullName, setFullName] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       await register({ email, password, full_name: fullName });
-      onRegisterSuccess(fullName); // Update parent component with full name
+      alert("Registered successfully!");
+      // Redirect or reset form if needed
     } catch (err) {
       console.error("Registration error:", err);
     }
